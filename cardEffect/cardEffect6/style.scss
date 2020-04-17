@@ -1,0 +1,75 @@
+@import "../../baseCss";
+
+body{
+    background:#242424;
+    .container{
+        @include displayFlex();
+        flex-wrap:wrap;
+        .square{
+            @include displayFlex();
+            position:relative;
+            width:20%;
+            padding:10px;
+            margin:10px;
+            overflow: hidden;
+            background:red;
+            &:hover .square_content{
+                transform:rotateX(0deg);
+            }
+            &:hover img{
+                height:120%;
+            }
+            .square_content{
+                width:80%;
+                padding:20px;
+                background:rgba(36,36,36,0.9);
+                transform:rotateX(90deg);
+                transition:0.5s;
+                z-index:1;
+                h3{
+                    margin:10px 0;
+                    color:yellow;
+                }
+                p{
+                    font-size:14px;
+                    color:white;
+                    // text-align:justify;
+                }
+            }
+            img{
+                position:absolute;
+                height:100%;
+                transition:0.5s;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:900px){
+    body{
+        .container{
+            .square{
+                width:40%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:600px){
+    body{
+        .container{
+            .square{
+                width:80%;
+                img{
+                    height:auto;
+                    width:100%;
+                }
+                &:hover img{
+                    height:auto;
+                    width:120%;
+                }
+            }
+        }
+    }
+}

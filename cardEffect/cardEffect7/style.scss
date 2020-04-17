@@ -1,0 +1,85 @@
+@import "../../baseCss";
+
+body {
+  background: #242424;
+  .container {
+    @include displayFlex();
+    margin-top: 60px;
+    .square {
+      @include displayFlex();
+      position: relative;
+      height: 350px;
+      width: 18%;
+      margin: 0 25px;
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      &:hover img {
+        top: -70px;
+      }
+      &:hover .square_button {
+        ul {
+          li {
+            transform: translateY(0px);
+            opacity: 1;
+            cursor:pointer;
+            &:nth-child(1) {
+              transition-delay: 0.2s;
+            }
+            &:nth-child(2) {
+              transition-delay: 0.3s;
+            }
+            &:nth-child(3) {
+              transition-delay: 0.4s;
+            }
+            &:nth-child(4) {
+              transition-delay: 0.5s;
+            }
+            &:nth-child(5) {
+              transition-delay: 0.6s;
+            }
+          }
+        }
+      }
+      .square_button {
+        z-index: 2;
+        ul {
+          @include displayFlex();
+          li {
+            @include displayFlex();
+            list-style: none;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            margin: 0 5px;
+            background: white;
+            transform: translateY(50px);
+            transition: 0.5s;
+            opacity: 0;
+          }
+        }
+      }
+      .square_content {
+        @include displayFlex(column);
+        width: 100%;
+        position: absolute;
+        bottom: 10px;
+        h3 {
+          margin: 0;
+          padding: 0;
+        }
+        p {
+          color: orangered;
+          margin: 0;
+          padding: 0;
+        }
+      }
+      img {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        transition: 0.5s;
+      }
+    }
+  }
+}

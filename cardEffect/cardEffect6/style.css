@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif; }
+
+body {
+  background: #242424; }
+  body .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; }
+    body .container .square {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: 20%;
+      padding: 10px;
+      margin: 10px;
+      overflow: hidden;
+      background: red; }
+      body .container .square:hover .square_content {
+        transform: rotateX(0deg); }
+      body .container .square:hover img {
+        height: 120%; }
+      body .container .square .square_content {
+        width: 80%;
+        padding: 20px;
+        background: rgba(36, 36, 36, 0.9);
+        transform: rotateX(90deg);
+        transition: 0.5s;
+        z-index: 1; }
+        body .container .square .square_content h3 {
+          margin: 10px 0;
+          color: yellow; }
+        body .container .square .square_content p {
+          font-size: 14px;
+          color: white; }
+      body .container .square img {
+        position: absolute;
+        height: 100%;
+        transition: 0.5s; }
+
+@media screen and (max-width: 900px) {
+  body .container .square {
+    width: 40%; } }
+@media screen and (max-width: 600px) {
+  body .container .square {
+    width: 80%; }
+    body .container .square img {
+      height: auto;
+      width: 100%; }
+    body .container .square:hover img {
+      height: auto;
+      width: 120%; } }
+
+/*# sourceMappingURL=style.css.map */

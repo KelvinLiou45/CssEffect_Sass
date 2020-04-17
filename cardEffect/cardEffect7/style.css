@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif; }
+
+body {
+  background: #242424; }
+  body .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px; }
+    body .container .square {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      height: 350px;
+      width: 18%;
+      margin: 0 25px;
+      background: white;
+      border-radius: 15px;
+      overflow: hidden; }
+      body .container .square:hover img {
+        top: -70px; }
+      body .container .square:hover .square_button ul li {
+        transform: translateY(0px);
+        opacity: 1;
+        cursor: pointer; }
+        body .container .square:hover .square_button ul li:nth-child(1) {
+          transition-delay: 0.2s; }
+        body .container .square:hover .square_button ul li:nth-child(2) {
+          transition-delay: 0.3s; }
+        body .container .square:hover .square_button ul li:nth-child(3) {
+          transition-delay: 0.4s; }
+        body .container .square:hover .square_button ul li:nth-child(4) {
+          transition-delay: 0.5s; }
+        body .container .square:hover .square_button ul li:nth-child(5) {
+          transition-delay: 0.6s; }
+      body .container .square .square_button {
+        z-index: 2; }
+        body .container .square .square_button ul {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center; }
+          body .container .square .square_button ul li {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            margin: 0 5px;
+            background: white;
+            transform: translateY(50px);
+            transition: 0.5s;
+            opacity: 0; }
+      body .container .square .square_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        bottom: 10px; }
+        body .container .square .square_content h3 {
+          margin: 0;
+          padding: 0; }
+        body .container .square .square_content p {
+          color: orangered;
+          margin: 0;
+          padding: 0; }
+      body .container .square img {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        transition: 0.5s; }
+
+/*# sourceMappingURL=style.css.map */
