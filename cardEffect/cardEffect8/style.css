@@ -10,14 +10,31 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    margin: 40px 0; }
     body .container .square {
+      position: relative;
+      margin: 0 20px;
       width: 23%;
       height: 500px;
-      background: black; }
+      background: black;
+      overflow: hidden; }
+      body .container .square .square_imgBx {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        transition: 0.5s; }
+      body .container .square:hover .square_imgBx {
+        top: -50px;
+        filter: blur(2px); }
       body .container .square .square_content {
         padding: 20px;
-        color: white; }
+        color: white;
+        background: linear-gradient(transparent, black 30%);
+        transform: translateY(330px);
+        transition: 0.5s; }
+        body .container .square .square_content .square_content_firTitle {
+          font-size: 15px; }
         body .container .square .square_content .square_content_secTitle {
           color: orangered; }
         body .container .square .square_content .square_content_star {
@@ -27,7 +44,8 @@ body {
           flex-direction: row;
           justify-content: flex-start;
           align-items: center;
-          margin: 10px 0; }
+          margin: 10px 0;
+          font-weight: bold; }
           body .container .square .square_content .square_content_type .action {
             margin: 0 2px;
             padding: 5px;
@@ -61,5 +79,7 @@ body {
             overflow: hidden; }
             body .container .square .square_content .square_content_cast .pic img {
               height: 100%; }
+      body .container .square:hover .square_content {
+        transform: translateY(120px); }
 
 /*# sourceMappingURL=style.css.map */
